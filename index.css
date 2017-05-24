@@ -1,0 +1,447 @@
+.container-fluid{
+	padding: 0px;
+	font-family: Roboto, sans-serif;
+	overflow: hidden;
+}
+.overlay{
+	display: none;
+	background-color: rgba(0,0,0,.4);
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+}
+.page_header{
+	background: url("https://paymatrix.in/application/static/images/new_home/benefits_bg.png");
+	min-height: 500px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+.benefits_nav{
+	background-color: transparent;
+	padding-left: 10px;
+}
+.navbar-header{
+	height: 60px;
+	overflow: hidden;
+	margin-left: 5px;
+}
+.navbar-brand{
+	padding-top: 5px;
+}
+.navbar-default .navbar-nav>li>a{
+	color: white;
+}
+.navbar-default .navbar-nav>li>a:hover{
+	color: #3fc1c9;
+}
+.nav_list{
+	margin-top: 10px;
+	margin-right: 10px;
+	font-size: 12px;
+	font-family: 'Montserrat', sans-serif;
+}
+.navbar-default .active>a{
+	padding: 2px 10px;
+	margin: 12px;
+}
+.navbar-default .navbar-nav>.active>a{
+	background-color: white;
+	color: #0071bc;
+	border-radius: 8px; 
+}
+.navbar-default .navbar-nav>.active>a:hover{
+	color: #3fc1c9;
+	background-color: white;
+}
+.nav-white {
+	background-color: #fff;
+	height: 70px;
+	color: #0071bc;
+	font-family: Montserrat,sans-serif;
+	font-size: 12px;
+}
+#side-nav{
+	position: fixed;
+	top: 0;
+	right: -250px;
+	background-color: #0071bc;
+	color: white;
+	width: 250px;
+	height: 100vh;
+	z-index: 100;
+	transition: transform 1s;
+}
+.side-slide-in{
+	transform: translateX(-250px);
+}
+.side-slide-out{
+	transform: translateX(0px);
+}
+#side-nav ul li .closebtn {
+	font-size: 36px;
+	text-align: right;
+	margin-right: 17px;
+	height: 41px;
+	margin-top: -2px;
+}
+#side-nav ul{
+	list-style-type: none;
+}
+#side-nav-list{
+	padding: 0px;
+}
+#side-nav ul li a{
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 14px;
+	display: block;
+	transition: .3s;
+	min-width: 210px;
+	color: white;
+}
+#side-nav a:hover{
+	color: #00ffe0;
+}
+.tips .fa{
+	color: #a2a2a2;
+}
+.slide-out{
+	animation: slideout 0.5s ease;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+@keyframes{
+	from{
+		right: 0px;
+	}
+	to{
+		right: -250px;
+	}
+}
+.slide-in{
+	animation: slidein 0.5 ease;
+	position: absolute;
+	top: 0px;
+	right: -250px;
+}
+@keyframes{
+	from{
+		right: -250px;
+	}
+	to{
+		right: 0px;
+	}
+}
+.section-head {
+	width: 300px;
+	height: 95px;
+	margin: 40px auto;
+}
+.section-header h1{
+	font-size: 30px;
+}
+.section-content{
+	text-align: center;
+}
+.sub-content{
+	font-size: 17px;
+	margin-bottom: 10px;
+}
+.tab{
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: middle;
+	width: 50%;
+	float: left;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 500;
+	font-family: Roboto,sans-serif;
+}
+.image-parent{
+	margin: 10px auto;
+	border-radius: 100%;
+	width: 75px;
+	height: 75px;
+	padding: 8px 10px;
+	background-color: #000;
+	border: 2px solid #ddd;
+	opacity: 0.3;
+}
+.active-tab{
+	border: 2px solid rgb(0, 113, 188);
+	opacity: 1;
+	background-color: transparent;
+}
+.content>a, .content>a:hover{
+	color: black;
+	text-decoration: none;
+	opacity: 0.3;
+}
+.active-tab + .content>a{
+	color: black;
+	text-decoration: none;
+	opacity: 1;
+}
+.glyphicon-triangle-bottom{
+	color: rgb(0, 113, 188);
+	margin: 9px 0px;
+}
+.benefits{
+	background-color: #f9f9f9;
+	margin: 20px auto;
+	font-family: Roboto,sans-serif;
+	padding: 0px;
+}
+.table-caption{
+	width: 100%;
+	background-color: #0872b9;
+	color: white;
+	font-weight: 500;
+	padding: 7px;
+	font-size: 18px;
+	text-align: left;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+	border: 0px;
+	padding: 13px;
+	font-size: 16px;
+}
+.page-footer{
+	background: linear-gradient(rgba(55, 71, 79, .9) 0, rgba(55, 71, 79, .9) 100%), url("https://paymatrix.in/application/static/images/new_home/paymatrix-footer.jpg");
+	padding-top: 40px;
+	margin-top: 60px;
+}
+.footer-logo-text img{
+	width: 250px;
+}
+.footer-sub-pages ul{
+	list-style-type: none;
+}
+.footer-sub-pages a{
+	color: white;
+}
+.footer-sub-pages a:hover{
+	color: #3fc1c9;
+	text-decoration: none;
+}
+.footer-sub-pages li.head{
+	color: #3fc1c9;
+	text-decoration: none;
+}
+.contact{
+	margin-top: 20px;
+	font-size: 16px;
+	color: #3fc1c9;
+}
+.contact .fa{
+	margin-bottom: 15px;
+}
+.contact a, .contact a:hover{
+	color: #3fc1c9;
+	text-decoration: none;
+}
+.social a{
+	font-size: 32px;
+	color: white;
+	margin: 15px 15px 15px 0px;
+}
+.social a:hover{
+	color: #3fc1c9;
+}
+hr{
+	margin: 20px 0px;
+	border: 1px solid rgba(208,203,203,0.33);
+}
+.page-footer .copyright p {
+	font-size: 11px;
+	text-align: center;
+	color: rgba(208,203,203,.33);
+}
+.security-logo img{
+	margin: auto;
+	display: block;
+}
+.slider-handle.custom::before {
+	line-height: 20px;
+	font-size: 20px;
+	content: '\f015';
+	color: #0872b9;
+	font-family: FontAwesome;
+	font-size: 28px;
+}
+.referral .slider-handle.custom::before{
+	font-family: FontAwesome;
+	font-size: 20px;
+	content: '\f0c0';
+}
+.slider.slider-horizontal .slider-tick, .slider.slider-horizontal .slider-handle {
+	margin-top: -13px;
+}
+
+.slider.slider-horizontal .slider-track {
+	height: 0px;
+	border: 1px solid #1ab394;
+}
+.slider.slider-horizontal{
+	width: 100%;
+}
+.calculations{
+	padding: 0px;
+	background-color: #f9f9f9;
+	font-size: 14px;
+}
+.options{
+	padding: 15px;
+}
+.rent{
+	margin: 20px 0px;
+}
+.rent-input, .referral-input{
+	width: 200px;
+	display: inline-block;
+	float: right;
+	margin-top: -3px;
+}
+.referral{
+	margin: 20px 0px;
+	padding: 10px 0px;
+}
+.referral .slider-horizontal{
+	margin-left: 20px;
+}
+.input-group-addon{
+	border: 1px solid grey;
+	border-right: 0px;
+	background-color: white;
+	padding: 5px 12px;
+	color: #1ab394;
+	height: 27px;
+}
+.payment{
+	text-align: left;
+	margin: 20px 0px;
+}
+.radio-buttons{
+	margin-bottom: 20px;
+}
+.radio-inline{
+	margin-left: 20px;
+}
+.checkbox-inline+.checkbox-inline, .radio-inline+.radio-inline {
+	margin-top: 0;
+	margin-left: 0px; 
+}
+.radio-inline input[type=radio]{
+	margin-top: -4px;
+}
+input{
+	border: 1px solid grey;
+	border-left: 0px;
+	height: 27px;
+}
+label{
+	font-weight: 400;
+}
+.creditCard{
+	margin: 50px 0px 20px 0px;
+	padding: 10px 0px;
+}
+.cc{
+	font-weight: 700;
+	font-size: 13px;
+	text-align: right !important;
+}
+.cc-value{
+	text-align: center !important;
+	font-weight: 700;
+	color: #0872b9;
+	font-size: 14px;
+	border-bottom: 1px solid #ccc;
+}
+.inline{
+	display: inline-block;
+/*	margin-right: 20px;
+*/	text-align: left;
+}
+.center{
+	text-align: center;
+}
+.input-group .disable{
+	background-color: rgb(235, 235, 228);
+}
+.saving-value{
+	padding: 15px;
+	background-color: #7eaa65;
+	color: white;
+}
+.savings{
+	padding-right: 0px !important;
+	padding-left: 15px;
+	margin: 5px 0px 15px 0px !important;
+	text-align: left;
+}
+.saving-value .saving-head {
+	margin-top: 10px;
+	font-size: 18px;
+}
+.nav-white .navbar-brand{
+	margin-top: -42px;
+}
+.nav-white{
+	box-shadow: 0 5px 10px 0 rgba(97,97,97,.2);
+	height: 70px;
+	position: fixed;
+	top: -80px;
+	width: 100%;
+	z-index: 50;
+	font-size: 12px;
+	transition: transform 1s;
+}
+.nav-slide{
+	transform: translate(0px, 80px);
+}
+.nav-white .navbar-nav>li>a{
+	color: #0071bc;
+}
+.nav-white .navbar-nav>.active>a {
+	background-color: #0071bc;
+	color: white;
+}
+.nav-white .navbar-nav>.active>a:hover{
+	background-color: #0071bc;
+	color: #00ffe0;
+}
+.offers{
+	background-color: #ddd;
+	padding: 8px;
+}
+.animated-pulse{
+	animation: pulse 1s ease-in-out infinite alternate; 
+}
+@keyframes pulse{
+	0%{
+		transform: scale(1.0);
+	}
+	100%{
+		transform: scale(0.9);
+	}
+}
+.right{
+	text-align: right;
+}
+.green{
+	color: #1ab394;
+}
+.blue{
+	color: #0071bc;
+}
+.hide{
+	display: none;
+}
+.show{
+	display: block;
+}

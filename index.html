@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Know your benefits | Paymatrix</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">	
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./bootstrap-slider.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script
+	src="https://code.jquery.com/jquery-3.2.1.min.js"
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="./bootstrap-slider.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+	<div class="overlay hidden" id="overlay"></div>
+	<div class="container-fluid">
+		<header class="page_header">
+			<nav class="nav navbar-default benefits_nav">
+				<div class="conainer-fluid clearfix">
+					<div class="navbar-header col-xs-10 col-sm-4">
+						<a class="navbar-brand" href=""><img src="https://paymatrix.in/application/static/images/new_home/paymatrix-logo.svg"></a>
+					</div>
+					<div class="nav-menu clearfix col-xs-1 col-xs-push-1 col-sm-6 col-sm-push-2">
+						<ul class="nav navbar-nav nav_list pull-right">
+							<li class="active hidden-sm hidden-xs"><a href="">Benefits</a></li>
+							<li class="hidden-sm hidden-xs "><a href="">Home</a></li>
+							<li class="hidden-xs"><a href="">Log in | Sign up</a></li>
+							<li onclick="show_sideNav()" id="menu_btn"><a href="#"><span class="glyphicon glyphicon-menu-hamburger"></span>&nbsp;<span class="hidden-xs">Menu</span></a></li>
+
+						</ul>
+					</div>			
+				</div>
+			</nav>
+			<div id="side-nav">
+				<ul class="side-nav-list">
+					<li><a href="javascript:void(0)" class="closebtn cross_btn" onclick="hide_sideNav()">×</a></li>
+					<li><a href="">Log in | Sign up</a></li>
+					<li><a href="">About us</a></li>
+					<li><a href="">Rent Agreements</a></li>
+					<li><a href="">Rent Receipts</a></li>
+					<li><a href="">Tenant screening</a></li>
+					<li><a href="">Benefits</a></li>
+					<li><a href="">Pricing</a></li>
+					<li><a href="">Blog</a></li>
+					<li><a href="">Careers</a></li>
+					<li><a href="">FAQs</a></li>
+				</ul>
+			</div>
+		</header>
+		<section class="clearfix section">
+			<div class="container col-sm-12 col-md-10 col-md-push-1">
+				<div class="section-head">
+					<div class="tab" onclick="display_tenanat()">			
+						<div class="image-parent clearfix" id="tenant">
+							<img src="https://paymatrix.in//application/static/images/businessman.svg"><span class="glyphicon glyphicon-triangle-bottom" id="tenant-glyph"></span>
+						</div>
+						<div class="content"><a href="">TENANT</a></div>
+					</div>
+					<div class="tab" onclick="display_landlord()">
+						<div class="image-parent clearfix" id="landlord">
+							<img src="https://paymatrix.in//application/static/images/agent.svg"><span class="glyphicon glyphicon-triangle-bottom" id="landlord-glyph"></span><br>
+						</div>
+						<div class="content"><a href="">LANDLORD</a></div>
+					</div>
+				</div>
+				<div class="section-content">
+					<div class="section-header">
+						<h1>Calculate Your Savings on Our Platform</h1>
+					</div>
+					<hr>
+					<div class="tenant-calculation sub-content" id="tenant-tab">
+						<p>Paymatrix enables you to pay monthly property rent and rent advances the smarter way! As a tenant, you can now pay rent on credit, generate <a href="">rent receipts</a> and <a href="">rent agreements</a> online and avail several related services, all at a single place.</p><br>
+						<p>This means better management of cash flows and now you can postpone your rent payment for a while to spend on something even worthwhile.</p>
+						<div class="calculations col-lg-10 col-lg-push-1 col-md-12 clearfix">
+							<div class="calculation-header">
+								<p class="table-caption">Calculate</p>
+							</div>
+							<div class="options container col-sm-9 col-xs-12">
+								<div class="rent">
+									<p class="inline col-sm-12 col-md-4">Monthly Rent Amount</p>
+									<div class="col-xs-12 col-md-4 col-sm-6"><input id="rent" data-slider-id='rentSlider' type="text" data-slider-min="1000" data-slider-max="100000" data-slider-step="1" data-slider-value="5000" data-slider-tooltip="hide" data-slider-handle="custom"/></div>
+									<div class="rent-input col-xs-12 col-md-2">
+										<div class="input-group">
+											<div class="input-group-addon"><i class="fa fa-inr rupee" aria-hidden="true"></i></div>
+											<input type="text" id="rent_val" class="col-sm-12 col-xs-12 range-value rent-cal" min="0" maxlength="7" max="9999999" value="5000" oninput="changeSliderValue(this.value)" style="text-align: right;">
+										</div>	
+									</div>							
+								</div>
+								<div class="payment container col-sm-12 col-xs-12">
+									<p class="inline col-sm-3 col-xs-12">Mode of Payment</p>
+									<div class="radio-buttons col-sm-8 col-xs-12">
+										<div class="radio-inline">
+											<label>
+												<input type="radio" name="optionsRadios" id="paymentMode1" value="creditCard" checked>
+												Credit Card
+											</label>
+										</div>
+										<div class="radio-inline">
+											<label>
+												<input type="radio" name="optionsRadios" id="paymentMode2" value="debitCard">
+												Debit Card
+											</label>
+										</div>
+										<div class="radio-inline">
+											<label>
+												<input type="radio" name="optionsRadios" id="paymentMode3" value="netBanking">
+												Net Banking
+											</label>
+										</div>
+									</div>
+									<div class="creditCard">
+										<div class="clearfix" id="creditFreePeriod">
+											<p class="inline cc col-sm-3 col-xs-12">Credit free period:</p>
+											<p class="inline cc-value col-sm-6 col-xs-12">45 days</p>
+										</div>
+										<div class="clearfix" id="cardRewards">
+											<p class="inline cc col-sm-3 col-xs-12">Card Rewards:</p>
+											<p class="inline cc-value col-sm-6 col-xs-12"><i class="fa fa-inr"></i> &nbsp;<span id="card_rewards">50</span><span class="tips pull-right" style="position: relative; right: 0px;><a href="#" data-toggle="tooltip" data-placement="bottom" title="Reward points offered by credit card providers to users!!" class="help"><i class="fa fa-question-circle"></i></a></span></p>
+										</div>
+										<div class="clearfix">
+											<p class="inline cc col-sm-3 col-xs-12">Offers and discounts:</p>
+											<p class="inline cc-value col-sm-6 col-xs-12"><i class="fa fa-inr"></i> &nbsp;<span id="oad">150</span><span class="tips pull-right"><a href="#" data-toggle="tooltip" data-placement="bottom" title="Occasional promotions floated by Paymatrix and its payment partners." class="help"><i class="fa fa-question-circle"></i></a></span></p>
+										</div>
+									</div>
+									<div class="referral">
+										<p class="inline col-sm-12 col-md-4">Referrals per month</p>
+										<div class="col-xs-12 col-md-4 col-sm-6"">
+											<input id="referral" data-slider-id='referralSlider' type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="0" data-slider-tooltip="hide" data-slider-handle="custom"/>
+										</div>
+										<div class="referral-input col-xs-12">
+											<div class="input-group">
+												<div class="input-group-addon disable"><i class="fa fa-user rupee" aria-hidden="true"></i></div>
+												<input type="text" id="referral_val" class="col-sm-12 col-xs-12 range-value referral-cal" min="0" maxlength="3" max="10" disabled="true" value="0" style="text-align: right;">
+											</div>	
+										</div>							
+									</div>
+								</div>
+							</div>
+							<div class="savings col-sm-3 col-xs-12">
+								<div class="saving-value">
+									<h3 class="saving-head" style="text-align: left;">SAVINGS</h3>
+									<span style="color: #fff;margin-left: 28px;font-size: 30px;">
+										<i class="fa fa-inr" aria-hidden="true"></i> &nbsp;<span id="savings">249</span>
+									</span>
+								</div>
+								<div class="offers hidden-xs"> <img src="https://paymatrix.in//application/static/images/offer-sticker2.png" alt="offers" class="animated-pulse" width="100%"></div>
+							</div>
+						</div>
+						<div class="benefits benefits col-lg-10 col-lg-push-1 col-sm-12 col-sm-push-0">
+							<table class="table table-sm">
+								<caption class="table-caption">Benefits</caption>
+								<thead>
+									<tr>
+										<th></th>
+										<th class="center hidden-xs">Conventional way</th>
+										<th class="center blue">Paymatrix</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="right">Payment Mode</td>
+										<td class="center hidden-xs">Cash / Net Banking</td>
+										<td class="center green">Net Banking / Credit card</td>
+									</tr>
+									<tr>
+										<td class="right">Credit Option</td>
+										<td class="center hidden-xs">NO</td>
+										<td class="center green">YES</td>
+									</tr>
+									<tr>
+										<td class="right">Rent Receipts (For Tax exemption)</td>
+										<td class="center hidden-xs">NO</td>
+										<td class="center green">YES</td>
+									</tr>
+									<tr>
+										<td class="right">Discounts and Rewards</td>
+										<td class="center hidden-xs">NO</td>
+										<td class="center green">YES</td>
+									</tr>
+									<tr>
+										<td class="right">Rent Agreements</td>
+										<td class="center hidden-xs">YES</td>
+										<td class="center green">YES</td>
+									</tr>
+									<tr>
+										<td class="right">Rent Advance Management</td>
+										<td class="center hidden-xs">NO</td>
+										<td class="center green">YES</td>
+									</tr>
+									<tr>
+										<td class="right">Build Credit history</td>
+										<td class="center hidden-xs">NO</td>
+										<td class="center green">YES</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="landlord-div sub-content" id="landlord-tab">
+						<p>Paymatrix enables you to timely collect rent from your tenant by extending the option of paying rent on credit card. As a landlord or property manager, you can also issue <a href="">rent receipts</a> online, generate <a href="">rent agreements</a>, screen your potential tenants and manage multiple properties all at a click on your dashboard. All these mean hassle-free rent management and better service to you tenants!.</p>
+						<div class="benefits benefits col-lg-10 col-lg-push-1 col-sm-12 col-sm-push-0">
+							<table class="table">
+								<caption class="table-caption">Benefits</caption>
+								<thead>
+									<tr>
+										<th></th>
+										<th class="center hidden-xs">Conventional way</th>
+										<th class="center blue">Paymatrix</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="right">Collection Mode</td>
+										<td class="center hidden-xs">Cash / Net Banking</td>
+										<td class="center green">Net Banking / Credit card</td>
+									</tr>
+									<tr>
+										<td class="right">Security Deposit Management</td>
+										<td class="center hidden-xs">NO</td>
+										<td class="center green">YES</td>
+									</tr>
+									<tr>
+										<td class="right">Automated issue of Rent receipts</td>
+										<td class="center hidden-xs">NO</td>
+										<td class="center green">YES</td>
+									</tr>
+									<tr>
+										<td class="right">Rent agreements</td>
+										<td class="center hidden-xs">YES</td>
+										<td class="center green">YES</td>
+									</tr>
+									<tr>
+										<td class="right">Discounts and Rewards</td>
+										<td class="center hidden-xs">NO</td>
+										<td class="center green">YES</td>
+									</tr>
+									<tr>
+										<td class="right">Branding of your property</td>
+										<td class="center hidden-xs">NO</td>
+										<td class="center green">YES</td>
+									</tr>
+									<tr>
+										<td class="right">Tenant Screening</td>
+										<td class="center hidden-xs">NO</td>
+										<td class="center green">YES</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="page-footer clearfix">
+			<div class="container">
+				<div class="col-lg-3 col-md-3 col-sm-12 footer-logo-text">
+					<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12 mobile-logo">
+						<img src="https://paymatrix.in//application/static/images/main_home/footer-logo.png" alt="footer-logo">
+						<p class="pay-content visible-sm-block">Paymatrix endeavours to solve the biggest pain points in the Indian property rental market - Rent payment and Rent collection.</p>
+						<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12 contact-social">
+							<div class="contact">
+								<div>
+									<a href=""><i class="fa fa-phone" aria-hidden="true"></i></a> |
+									<a href=""><i class="fa fa-whatsapp" aria-hidden="true"></a></i>&nbsp;<a href="">  +91-7305145146</a>
+								</div>
+								<div>
+									<a href=""><i class="fa fa-envelope" aria-hidden="true"></i></a><a href=""> support@paymatrix.in</a>
+								</div>
+							</div>
+							<div class="social">
+								<a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+								<a href=""><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+								<a href=""><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+								<a href=""><i class="fa fa-youtube" aria-hidden="true"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-9 col-md-9 col-sm-12 footer-sub-pages hidden-xs">
+					<div class="col-lg-3 col-md-3 col-sm-3">
+						<ul>
+							<a href=""><li class="head">Paymatrix</li></a>
+							<a href=""><li>About us</li></a>
+							<a href=""><li>Blog</li></a>
+							<a href=""><li>Careers</li></a>
+							<a href=""><li>Offers</li></a>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3">
+						<ul>
+							<a href=""><li class="head">Services</li></a>
+							<a href=""><li>Rent Agreements</li></a>
+							<a href=""><li>Rent receipts</li></a>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3">
+						<ul>
+							<a href=""><li class="head">Learn More</li></a>
+							<a href=""><li>Pricing us</li></a>
+							<a href=""><li>Benefits</li></a>
+							<a href=""><li>Teneant Screening</li></a>
+							<a href=""><li>Apply loan</li></a>
+							<a href=""><li>Innovation Labs</li></a>
+							<a href=""><li>UPI</li></a>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3">
+						<ul>
+							<a href=""><li class="head">Support</li></a>
+							<a href=""><li>Contact Us</li></a>
+							<a href=""><li>FAQs</li></a>
+							<a href=""><li>Privacy Policy</li></a>
+							<a href=""><li>Terms and Conditions</li></a>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="copyright">
+				<p>© Copyright 2015-2017 Paymatrix. All Rights Reserved.</p>
+			</div>
+			<div class="security-logo">
+				<img src="https://paymatrix.in//application/static/images/main_home/footer_secure.png" alt="secure payment">
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
