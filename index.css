@@ -306,6 +306,9 @@ hr{
 	float: right;
 	margin-top: -3px;
 }
+.rent-cal:focus{
+	outline: none !important;
+}
 .referral{
 	margin: 20px 0px;
 	padding: 10px 0px;
